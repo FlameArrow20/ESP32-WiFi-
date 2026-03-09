@@ -1,17 +1,15 @@
-#include <ArduinoJson.h>
 #include <WiFi.h>
 
-int value;
-const char* ssid = "PLDTHOMEFIBR77a88";
-const char* pass = "PLDTWIFIsmmw9";
+const char* ssid = "your_ssid"; //Change this according to your own ssid
+const char* pass = "your_password"; //Change this according to your own password
 
 void startWifi(){
 
-  int counter;
+  int counter = 0;
 
   WiFi.begin(ssid, pass);
 
-  if (WiFi.status() != WL_CONNECTED && counter != 40){
+  if (WiFi.status() != WL_CONNECTED && counter != 20){
 
     Serial.println("Connecting...");
     Serial.println("...");
